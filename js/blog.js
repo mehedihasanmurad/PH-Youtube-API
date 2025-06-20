@@ -8,7 +8,13 @@ const loadCategories = () => {
 
 //user ba UI te dekhabo
 const displayCategories = (categories) => {
-    console.log(categories);
+    const categoriesContainer = document.getElementById("categories");
+    categories.forEach((category) => {
+        const button = document.createElement("button");
+        button.classList = "btn";
+        button.innerText = category.category;
+        categoriesContainer.appendChild(button);
+    });
 }
 
 loadCategories();
